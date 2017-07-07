@@ -1,16 +1,28 @@
 .pane {
   display: none;
   width: auto;
+  margin-top: 5px;
 }
 
-.aside {
+aside.glossary section {
   display: none;
 }
 
-.start {
+#start {
   display: block;
 }
 
 .revealed {
   display: block;
+}
+
+.button-bar {
+  width: 100%;
+}
+
+.soft-button {
+  border: 1px solid;
+  padding: 5px;
+  margin: 5px;
+  float: right;
 }
