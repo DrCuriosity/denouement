@@ -28,5 +28,8 @@ as arrows.
   <div class="pane" data-action="prev">
     <p>...progressively revealed.</p>
   </div>
+  <div class="pane revealed">
+    <p>This pane has no actions, and is revealed by default.</p>
+  </div>
 </div>
 ```
