@@ -1,7 +1,13 @@
 var state = {
   gloss_revealed: [],
   pane_revealed: [],
+  knowledge: [],
 };
+
+function switch_active_pane(pane) {
+  $('.pane').removeClass('active');
+  pane.addClass('active');
+}
 
 function build_button_bar(pane) {
   data_dir = $(pane).attr('data-action');
@@ -42,14 +48,23 @@ function build_button_bar(pane) {
 
 function soft_button_handler(e) {
   target = $(e.target);
-  pane = $('.soft-button').parents('div.pane');
+  pane = target.parents('div.pane');
   action = target.attr('data-action');
 
   target.addClass('soft-button-visited');
 
-  if (action=="next") {
-    next = $(pane).next();
-    next.css('display', 'block');
+  switch(action) {
+    case "next":
+      next = $(pane).next();
+      switch_active_pane(next);
+      next.fadeIn();
+      break;
+    case "prev":
+      prev = $(pane).prev();
+      switch_active_pane(prev);
+      break;
+    default:
+      // Do some handling for custom actions.
   }
 }
 
@@ -59,7 +74,7 @@ function gloss(e) {
   target = $(e.target);
   // Check for a specific item attribute, or use the text if there is none.
   item = target.attr('item') || target.text();
-  $('.glossary').find('section#'+item).show();
+  $('.glossary').find('section#'+item).fadeIn();
   $('.glossary').addClass('open');
 }
 
