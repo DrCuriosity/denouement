@@ -1,0 +1,16 @@
+.pane {
+  display: none;
+  width: auto;
+}
+
+.aside {
+  display: none;
+}
+
+.start {
+  display: block;
+}
+
+.revealed {
+  display: block;
+}
