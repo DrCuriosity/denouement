@@ -56,6 +56,10 @@ tt {
   width: 70%;
 }
 
+.pane.active {
+  background: #222;
+}
+
 .button-bar {
   min-height: 40px;
 }
