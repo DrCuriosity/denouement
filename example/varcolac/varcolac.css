@@ -1,0 +1,84 @@
+/* Custom CSS for this story. */
+
+body {
+  background: black;
+  color: white;
+}
+
+#main {
+  width: auto;
+}
+
+/* Denouement */
+
+aside {
+  width: 25%;
+  float: right;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+aside.open {
+  border: thin dotted dimgrey;
+}
+
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid red;
+  margin: 1em 0;
+  padding: 0;
+}
+
+hr.sub {
+  border-top: 1px dashed grey;
+}
+
+
+tt {
+  color: green;
+}
+
+.trail {
+  margin-top: 5px;
+  width: 70%;
+  line-height: 95%;
+  color: dimgrey;
+}
+
+/* Denouement overrides */
+
+.pane {
+  border: thin solid dimgrey;
+  padding: 10px;
+  width: 70%;
+}
+
+.button-bar {
+  min-height: 40px;
+}
+
+.button-bar hr {
+  border-top: 1px dashed grey;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.soft-button {
+  border-color: dimgrey;
+  background: darkslategrey;
+  min-height: 20px;
+}
+
+.soft-button-visited {
+  color: grey;
+  background: #222;
+}
+
+.gloss {
+  font-weight: bolder;
+  color: #cfd;
+  cursor: pointer;
+}
